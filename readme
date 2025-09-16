@@ -1,0 +1,38 @@
+# Recommandateur de Critiques (SBERT + FastAPI)
+
+## Fichiers
+- preprocess.py: nettoie les CSV bruts et produit `data/<name>_clean.csv`.
+- build_index.py: construit SBERT model et sauvegarde les resultats dans `models/`.
+- app.py: User Simulation de FastAPI API pour Film recommendations.
+- Dockerfile: Simple pour creer l'image de l'aplication, elle est au niveau de docker hub: username est mayq1, nom de l'image est mayq1/data_critique:latest.
+- requirements.txt: Libs à telecharger pour le bon fonctionnement du code.
+
+## Etapes de realisation du model
+1. Verifier que ces 2 CSV bruts sont dans le dossier project root pulled:
+   - `interstellar_critique.csv`
+   - `fightclub_critique.csv`
+
+2. Nettoyage en utilisant ces commandes Python (les fichiers nettoyés sont deja presents au niveau de github dans le fichier data/):
+   python preprocess.py --input interstellar_critiques.csv --output data/interstellar_clean.csv
+   python preprocess.py --input fightclub_critiques.csv --output data/fightclub_clean.csv
+
+3. Construire les models SBERT pour les deux films:
+   python build_index.py --clean_csv data/interstellar_clean.csv --model_dir models
+   python build_index.py --clean_csv data/fightclub_clean.csv --model_dir models
+
+4. Lancer l'API avec cette commande:
+   uvicorn app:app --reload --port 8000
+
+5. Tester le bon fonctionnement de l'application:
+     soit direct sur : http://127.0.0.1:8000 
+     ou, avec la fct GET, par example:
+     GET http://127.0.0.1:8000/?film=fightclub&per_page=10&text=J%27adore+ce+film%2C+le+createur+est+un+genie+et+les+acteurs+sont+bons
+     
+6. Build l'image Docker puis run it avec:
+   docker build -t mayq1/data_critique:latest .     
+   docker run -d -p 8000:8000 mayq1/data_critique:latest  
+
+
+## Remarques
+Pour tester directement l'application,veuillez utiliser l’image Docker déjà buildée:          docker pull mayq1/data_critique:latest  
+docker run -d -p 8000:8000 mayq1/data_critique:latest  
