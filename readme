@@ -13,8 +13,8 @@
    - `fightclub_critique.csv`
 
 2. Nettoyage en utilisant ces commandes Python (les fichiers nettoyés sont deja presents au niveau de github dans le fichier data/):
-   python preprocess.py --input interstellar_critiques.csv --output data/interstellar_clean.csv
-   python preprocess.py --input fightclub_critiques.csv --output data/fightclub_clean.csv
+<pre> ```bash python preprocess.py --input interstellar_critiques.csv --output data/interstellar_clean.csv ``` </pre>   
+python preprocess.py --input fightclub_critiques.csv --output data/fightclub_clean.csv
 
 3. Construire les models SBERT pour les deux films:
    python build_index.py --clean_csv data/interstellar_clean.csv --model_dir models
