@@ -1,5 +1,13 @@
 # Recommandateur de Critiques (SBERT + FastAPI)
+## Installation locale
 
+```bash
+git clone https://github.com/tiredoof/Movie-critique-recommender.git
+cd Movie-critique-recommender
+python -m venv .venv
+source .venv/bin/activate   # ou .venv\Scripts\activate sur Windows
+pip install -r requirements.txt
+```
 ## Fichiers
 - preprocess.py: nettoie les CSV bruts et produit `data/<name>_clean.csv`.
 - build_index.py: construit SBERT model et sauvegarde les resultats dans `models/`.
