@@ -55,3 +55,4 @@ Pour tester directement l'application, veuillez utiliser l’image Docker déjà
 docker pull mayq1/data_critique:latest  
 docker run -d -p 8000:8000 mayq1/data_critique:latest  
 ```
+
