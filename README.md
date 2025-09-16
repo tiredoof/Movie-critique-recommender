@@ -1,4 +1,9 @@
 # Recommandateur de Critiques (SBERT + FastAPI)
+
+Ce projet propose un système de recommandation de critiques de films basé sur la similarité sémantique.  
+En utilisant **Sentence-BERT (SBERT)**, l’application analyse une critique donnée et suggère d’autres critiques similaires pour le **même film**; un utilisateur qui lit une critique sur *Fight Club* ou *Interstellar* pourra ainsi découvrir d’autres avis proches (positifs ou négatifs).
+
+---
 ## Installation locale
 ```
 git clone https://github.com/tiredoof/Movie-critique-recommender.git
@@ -11,7 +16,7 @@ pip install -r requirements.txt
 - preprocess.py: nettoie les CSV bruts et produit `data/<name>_clean.csv`.
 - build_index.py: construit SBERT model et sauvegarde les resultats dans `models/`.
 - app.py: User Simulation de FastAPI API pour Film recommendations.
-- Dockerfile: Simple pour creer l'image de l'aplication, elle est au niveau de docker hub: username est mayq1, nom de l'image est mayq1/data_critique:latest.
+- Dockerfile: Simple pour creer l'image de l'application, elle est au niveau de docker hub: username est mayq1, nom de l'image est mayq1/data_critique:latest.
 - requirements.txt: Libs à telecharger pour le bon fonctionnement du code.
 
 ## Etapes de realisation du model
@@ -45,7 +50,7 @@ pip install -r requirements.txt
 ```
 
 ## Remarques
-Pour tester directement l'application,veuillez utiliser l’image Docker déjà buildée:          
+Pour tester directement l'application, veuillez utiliser l’image Docker déjà buildée:          
 ```
 docker pull mayq1/data_critique:latest  
 docker run -d -p 8000:8000 mayq1/data_critique:latest  
