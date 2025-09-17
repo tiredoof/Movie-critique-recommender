@@ -5,7 +5,7 @@ En utilisant **Sentence-BERT (SBERT)**, l’application analyse une critique don
 
 ## Design du système
 
-Pour consulter le design détaillé du fonctionement du système (schéma et explications), veuillez vous rediriger vers le [PDF d'architecture du système](Rapport/Architecture_system.pdf).
+Pour consulter le design détaillé du fonctionement du système (schéma et explications), veuillez vous rediriger vers le [PDF d'architecture du système](Rapport/Architecture_system.pdf). **(PS: UTILISATON DE GPT POUR QUELQUES PHRASES)**.
 
 ---
 ## Implémentation
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ### Fichiers
 - preprocess.py: nettoie les CSV bruts et produit `data/<name>_clean.csv`.
 - build_index.py: construit SBERT model et sauvegarde les resultats dans `models/`.
-- app.py: User Simulation de FastAPI API pour Film recommendations.
+- app.py: User Simulation de FastAPI API pour Film recommendations **(PS: UTILISATION DE GPT POUR LE HTML FRONTEND CODE)**.
 - Dockerfile: Simple pour creer l'image de l'application, elle est au niveau de docker hub: username est mayq1, nom de l'image est mayq1/data_critique:latest.
 - requirements.txt: Libs à telecharger pour le bon fonctionnement du code.
 
