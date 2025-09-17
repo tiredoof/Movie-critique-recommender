@@ -251,7 +251,7 @@ def home(
     html_content = f"""
     <html>
     <head>
-        <title>🎬 Recommandateur de critiques de films</title>
+        <title>🎬 Recommandeur de critiques de films</title>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <style>
@@ -359,7 +359,7 @@ def home(
         <div class="max-w-6xl mx-auto px-4 py-8">
             <header class="text-center mb-12">
                 <h1 class="text-5xl md:text-6xl font-bold mb-4 flex items-center justify-center text-white">
-                    <i class="fas fa-film mr-4"></i> Recommandateur de Critiques
+                    <i class="fas fa-film mr-4"></i> Recommandeur de Critiques
                 </h1>
                 <p class="text-2xl opacity-90 text-white">Découvrez des critiques similaires à la vôtre grâce à l'IA</p>
             </header>
