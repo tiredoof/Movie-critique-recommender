@@ -74,7 +74,7 @@ Voici des captures d'écran de l'application en cours d'execution pour les deux 
 
 ### **Interstellar**  
 
-![Interstellar Critiques](images/interstellar_critique.png)
+![Interstellar Critiques](images/Interstellar_critique.png)
 
 
 Comme illustré dans la figure ci-dessous, vous pouvez limiter le nombre de critiques affichées en appliquant le filtre "Limiter le nombre de résultats”. Pour revenir à l’affichage complet de toutes les critiques, il suffit de cliquer sur le bouton rouge “Supprimer le filtre”. 
